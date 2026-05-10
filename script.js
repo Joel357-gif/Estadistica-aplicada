@@ -21,13 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
     
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Mensaje enviado correctamente');
-        this.reset();
-    });
-    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -40,4 +33,35 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const ensayos = [
+        { id: '1UYpKoAcPEa1P3DdXXG6mcoUyeq35xmVV', name: 'Ensayo 1' },
+        { id: '1gu6rkkBZrNd15Q6jZFmRr03x7SvAKbP-', name: 'Ensayo 2' }
+    ];
+    
+    let currentEnsayo = 0;
+    const ensayoIframe = document.getElementById('ensayoIframe');
+    const ensayoLink = document.getElementById('ensayoLink');
+    const ensayoCounter = document.getElementById('ensayoCounter');
+    const ensayoPrev = document.getElementById('ensayoPrev');
+    const ensayoNext = document.getElementById('ensayoNext');
+    
+    if (ensayoIframe && ensayoLink && ensayoCounter) {
+        function updateEnsayo(index) {
+            const e = ensayos[index];
+            ensayoIframe.src = 'https://drive.google.com/file/d/' + e.id + '/preview';
+            ensayoLink.href = 'https://drive.google.com/file/d/' + e.id + '/view?usp=sharing';
+            ensayoCounter.textContent = (index + 1) + ' / ' + ensayos.length;
+        }
+        
+        ensayoPrev.addEventListener('click', function() {
+            currentEnsayo = (currentEnsayo - 1 + ensayos.length) % ensayos.length;
+            updateEnsayo(currentEnsayo);
+        });
+        
+        ensayoNext.addEventListener('click', function() {
+            currentEnsayo = (currentEnsayo + 1) % ensayos.length;
+            updateEnsayo(currentEnsayo);
+        });
+    }
 });

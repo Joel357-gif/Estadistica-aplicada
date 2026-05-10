@@ -34,7 +34,6 @@
             </div>
             <h1>Portafolio de Estadística Aplicada</h1>
             <p>Joel Chamorro</p>
-            <p class="subtitle">Universidad Central del Ecuador</p>
             <a href="#cv" class="btn">Documentos</a>
         </div>
     </section>
@@ -44,8 +43,8 @@
         <div class="docs-container">
             <div class="doc-card">
                 <h3>Hoja de Vida</h3>
-                <iframe src="https://drive.google.com/file/d/1JZeHsLYohPP2z3vG72IYXxmxt4NbjPUX/preview" class="doc-iframe"></iframe>
-                <a href="https://drive.google.com/file/d/1JZeHsLYohPP2z3vG72IYXxmxt4NbjPUX/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
+                <iframe src="https://drive.google.com/file/d/1ja0MwlXihFv0Uc8kA58oCQjDbsSNqKvf/preview" class="doc-iframe"></iframe>
+                <a href="https://drive.google.com/file/d/1ja0MwlXihFv0Uc8kA58oCQjDbsSNqKvf/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
             </div>
             <div class="doc-card">
                 <h3>Sílabo</h3>
@@ -61,12 +60,27 @@
             <div class="card">
                 <div class="card-icon">📝</div>
                 <h3>ENSAYOS</h3>
-                <p>Ensayos sobre temas de estadística y análisis de datos.</p>
+                <div class="ensayos-slider">
+                    <div class="ensayos-nav">
+                        <button class="ensayos-prev" id="ensayoPrev">&#9664;</button>
+                        <span class="ensayos-counter" id="ensayoCounter">1 / 2</span>
+                        <button class="ensayos-next" id="ensayoNext">&#9654;</button>
+                    </div>
+                    <div class="ensayos-preview">
+                        <iframe id="ensayoIframe" src="https://drive.google.com/file/d/1UYpKoAcPEa1P3DdXXG6mcoUyeq35xmVV/preview" class="card-iframe"></iframe>
+                    </div>
+                    <a id="ensayoLink" href="https://drive.google.com/file/d/1UYpKoAcPEa1P3DdXXG6mcoUyeq35xmVV/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
+                </div>
+                <input type="hidden" id="ensayoIndex" value="0">
             </div>
             <div class="card">
                 <div class="card-icon">👤</div>
                 <h3>TRABAJOS INDIVIDUALES</h3>
                 <p>Tareas y ejercicios realizados de forma personal.</p>
+                <iframe src="https://drive.google.com/file/d/1lBt40wAm1IC3PKDntFUcbwallMTVEkyc/preview" class="card-iframe"></iframe>
+                <a href="https://drive.google.com/file/d/1lBt40wAm1IC3PKDntFUcbwallMTVEkyc/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
+                <hr class="card-divider">
+                <a href="https://docs.google.com/spreadsheets/d/1r476IH31K6mhYoTAb5tH_A0tJu_n4jGZ/edit?usp=sharing" target="_blank" class="btn-small">Ver Excel</a>
             </div>
             <div class="card">
                 <div class="card-icon">👥</div>
@@ -77,6 +91,37 @@
                 <div class="card-icon">🗺️</div>
                 <h3>MAPAS CONCEPTUALES</h3>
                 <p>Representaciones visuales de conceptos clave.</p>
+                <iframe src="https://drive.google.com/file/d/1bztNwXv_EhqqAupLg4VkQYMjCM0vjw1x/preview" class="card-iframe"></iframe>
+                <a href="https://drive.google.com/file/d/1bztNwXv_EhqqAupLg4VkQYMjCM0vjw1x/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">📖</div>
+                <h3>GLOSARIOS DE TÉRMINOS</h3>
+                <p>Definiciones de términos estadísticos clave.</p>
+                <iframe src="https://drive.google.com/file/d/1-P0pNNAXLfIscVRNUcu-KLNBFdo5pLLd/preview" class="card-iframe"></iframe>
+                <a href="https://drive.google.com/file/d/1-P0pNNAXLfIscVRNUcu-KLNBFdo5pLLd/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
+            </div>
+            <div class="card">
+                <h3>EVALUACIONES</h3>
+                <p>Exámenes y evaluaciones por unidad.</p>
+                <div class="evaluaciones-grid">
+                    <div class="eval-item">
+                        <h4>UNIDAD 1</h4>
+                        <a href="https://drive.google.com/drive/folders/18xnkh1hGYZcojkKXUwft000gLL8GKmbK?usp=sharing" target="_blank" class="btn-small">Ver</a>
+                    </div>
+                    <div class="eval-item">
+                        <h4>UNIDAD 2</h4>
+                        <a href="https://drive.google.com/drive/folders/1VHi4wkwnmQiJj0QxZqe2oqW8d7eUrQoK?usp=sharing" target="_blank" class="btn-small">Ver</a>
+                    </div>
+                    <div class="eval-item">
+                        <h4>UNIDAD 3</h4>
+                        <a href="#" class="btn-small">Próximamente</a>
+                    </div>
+                    <div class="eval-item">
+                        <h4>UNIDAD 4</h4>
+                        <a href="#" class="btn-small">Próximamente</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
