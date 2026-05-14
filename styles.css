@@ -570,6 +570,46 @@ footer {
     margin-bottom: 0.8rem;
 }
 
+.slider-container {
+    text-align: center;
+    width: 100%;
+}
+
+.slider-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.slider-prev,
+.slider-next {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background: #2980b9;
+}
+
+.slider-counter {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
 .eval-item {
     background: var(--light);
     padding:0.8rem;
