@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: '1gu6rkkBZrNd15Q6jZFmRr03x7SvAKbP-', name: 'Ensayo 2' }
     ];
     
-    function initSlider(items, iframeId, linkId, counterId, prevId, nextId) {
+    function initSlider(items, iframeId, linkId, counterId, prevId, nextId, onUpdate) {
         const iframe = document.getElementById(iframeId);
         const link = document.getElementById(linkId);
         const counter = document.getElementById(counterId);
@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             iframe.src = 'https://drive.google.com/file/d/' + item.id + '/preview';
             link.href = 'https://drive.google.com/file/d/' + item.id + '/view?usp=sharing';
             counter.textContent = (index + 1) + ' / ' + items.length;
+            if (onUpdate) onUpdate(index);
         }
         
         prev.addEventListener('click', function() {
@@ -83,5 +84,30 @@ document.addEventListener('DOMContentLoaded', function() {
             { id: '1UZtnA4TdF9KopzANAoUL45jO94L5v4oj', name: 'Mapa 4' }
         ],
         'mapaIframe', 'mapaLink', 'mapaCounter', 'mapaPrev', 'mapaNext'
+    );
+
+    initSlider(
+        [
+            { id: '1lBt40wAm1IC3PKDntFUcbwallMTVEkyc', name: 'Trabajo 1' },
+            { id: '1ET7n--US4QR1Omhr0Ztue_cEOPXx_5dX', name: 'Trabajo 2' }
+        ],
+        'trabajoIframe', 'trabajoLink', 'trabajoCounter', 'trabajoPrev', 'trabajoNext',
+        function(index) {
+            const excelLink = document.getElementById('trabajoExcelLink');
+            const excelDivider = excelLink.previousElementSibling;
+            const pbiLink = document.getElementById('trabajoPbiLink');
+            const pbiDivider = document.getElementById('trabajoPbiDivider');
+            if (index === 0) {
+                excelLink.style.display = 'inline-block';
+                excelDivider.style.display = 'block';
+                pbiLink.style.display = 'none';
+                pbiDivider.style.display = 'none';
+            } else {
+                excelLink.style.display = 'none';
+                excelDivider.style.display = 'none';
+                pbiLink.style.display = 'inline-block';
+                pbiDivider.style.display = 'block';
+            }
+        }
     );
 });

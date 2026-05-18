@@ -75,10 +75,19 @@
                 <div class="card-icon">👤</div>
                 <h3>TRABAJOS INDIVIDUALES</h3>
                 <p>Tareas y ejercicios realizados de forma personal.</p>
-                <iframe src="https://drive.google.com/file/d/1lBt40wAm1IC3PKDntFUcbwallMTVEkyc/preview" class="card-iframe"></iframe>
-                <a href="https://drive.google.com/file/d/1lBt40wAm1IC3PKDntFUcbwallMTVEkyc/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
+                <div class="slider-container">
+                    <div class="slider-nav">
+                        <button id="trabajoPrev" class="slider-prev">&#9664;</button>
+                        <span id="trabajoCounter" class="slider-counter">1 / 2</span>
+                        <button id="trabajoNext" class="slider-next">&#9654;</button>
+                    </div>
+                    <iframe id="trabajoIframe" src="https://drive.google.com/file/d/1lBt40wAm1IC3PKDntFUcbwallMTVEkyc/preview" class="card-iframe"></iframe>
+                    <a id="trabajoLink" href="https://drive.google.com/file/d/1lBt40wAm1IC3PKDntFUcbwallMTVEkyc/view?usp=sharing" target="_blank" class="btn-small">Ver PDF</a>
+                </div>
                 <hr class="card-divider">
-                <a href="https://docs.google.com/spreadsheets/d/1r476IH31K6mhYoTAb5tH_A0tJu_n4jGZ/edit?usp=sharing" target="_blank" class="btn-small">Ver Excel</a>
+                <a id="trabajoExcelLink" href="https://docs.google.com/spreadsheets/d/1r476IH31K6mhYoTAb5tH_A0tJu_n4jGZ/edit?usp=sharing" target="_blank" class="btn-small">Ver Excel</a>
+                <hr class="card-divider" id="trabajoPbiDivider" style="display:none">
+                <a id="trabajoPbiLink" href="https://drive.google.com/file/d/1o365ZIVBSujlVrfeMjNMS9kfW5BZQJYv/view?usp=sharing" target="_blank" class="btn-small" style="display:none">Ver Power BI</a>
             </div>
             <div class="card">
                 <div class="card-icon">👥</div>
