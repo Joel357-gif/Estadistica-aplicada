@@ -71,9 +71,42 @@ document.addEventListener('DOMContentLoaded', function() {
     initSlider(
         [
             { id: '1UYpKoAcPEa1P3DdXXG6mcoUyeq35xmVV', name: 'Ensayo 1' },
-            { id: '1gu6rkkBZrNd15Q6jZFmRr03x7SvAKbP-', name: 'Ensayo 2' }
+            { id: '1gu6rkkBZrNd15Q6jZFmRr03x7SvAKbP-', name: 'Ensayo 2' },
+            { id: '16JcJUyWTFLAacRpvcWkioXTjiodcst9B', name: 'Conferencia Smart Learning' },
+            { id: '18ABNDYcoEcr5FDTQRJXap_8wJbsfDkoi', name: 'Conferencia Transformación Digital' },
+            { id: '1vv220YV0zNKL70Ovr8fuliAxKFngLihh', name: 'Conferencia Educación a Distancia' },
+            { id: '1MmCjmSqatj7NEbR3xr1901ibLBmgiwlj', name: 'Conferencia Metodología Activa' }
         ],
-        'ensayoIframe', 'ensayoLink', 'ensayoCounter', 'ensayoPrev', 'ensayoNext'
+        'ensayoIframe', 'ensayoLink', 'ensayoCounter', 'ensayoPrev', 'ensayoNext',
+        function(index) {
+            const btn = document.getElementById('ensayoLink');
+            const titleEl = document.getElementById('ensayoTitle');
+            if (index === 2) {
+                btn.textContent = 'Ver Ensayo de la Conferencia';
+                btn.className = 'btn-small highlight';
+                titleEl.textContent = 'IA Generativa en el ámbito profesional: Editorial Tekman / Directora Carolina Clemente';
+                titleEl.style.display = 'block';
+            } else if (index === 3) {
+                btn.textContent = 'Ver Ensayo de la Conferencia';
+                btn.className = 'btn-small highlight';
+                titleEl.textContent = 'Caracterización de plataformas de inteligencia artificial para la transformación digital de la gestión educativ - MSc. Milton Labanda';
+                titleEl.style.display = 'block';
+            } else if (index === 4) {
+                btn.textContent = 'Ver Ensayo de la Conferencia';
+                btn.className = 'btn-small highlight';
+                titleEl.textContent = 'Transformación Digital de la Educación a Distancia: PhD. Yolanda Borja y MSc. Diego Tipán';
+                titleEl.style.display = 'block';
+            } else if (index === 5) {
+                btn.textContent = 'Ver Ensayo de la Conferencia';
+                btn.className = 'btn-small highlight';
+                titleEl.textContent = 'Metodolodia activa apoyadas por tecnología - MSc. Hamilton Cabrera y MSc. Jorge Muñoz';
+                titleEl.style.display = 'block';
+            } else {
+                btn.textContent = 'Ver PDF';
+                btn.className = 'btn-small';
+                titleEl.style.display = 'none';
+            }
+        }
     );
 
     initSlider(

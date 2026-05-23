@@ -406,8 +406,20 @@ footer {
 
 .card-divider {
     border: none;
-    border-top:1px solid #eee;
-    margin:1rem 0;
+    border-top: 1px solid #eee;
+    margin: 1rem 0;
+}
+
+.ensayo-title {
+    background: #fef3e2;
+    color: #d35400;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border-left: 4px solid #e67e22;
 }
 
 .evaluaciones-grid {
@@ -608,6 +620,60 @@ footer {
     font-weight: 600;
     color: var(--primary);
     font-size: 0.95rem;
+}
+
+.btn-small.highlight {
+    background: #e67e22;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+}
+
+.ensayo-title {
+    background: #faf5ff;
+    color: #732d91;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border-left: 4px solid #8e44ad;
+}
+
+.btn-small.highlight {
+    background: #8e44ad;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+}
+
+.btn-small.highlight:hover {
+    background: #732d91;
+}
+
+.card-congreso {
+    border: 2px solid #8e44ad;
+    background: linear-gradient(135deg, #faf5ff, #ffffff);
+}
+
+.card-congreso h3 {
+    color: #8e44ad;
+}
+
+.card-congreso .card-icon {
+    font-size: 2.5rem;
+}
+
+.card-congreso .btn-small {
+    background: #8e44ad;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+}
+
+.card-congreso .btn-small:hover {
+    background: #732d91;
 }
 
 .eval-item {
