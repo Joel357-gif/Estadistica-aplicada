@@ -122,7 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initSlider(
         [
             { id: '1lBt40wAm1IC3PKDntFUcbwallMTVEkyc', name: 'Trabajo 1' },
-            { id: '1ET7n--US4QR1Omhr0Ztue_cEOPXx_5dX', name: 'Trabajo 2' }
+            { id: '1ET7n--US4QR1Omhr0Ztue_cEOPXx_5dX', name: 'Trabajo 2' },
+            { id: '1EyYjRGsUwN1WpYyZlqI710hutCEMatDB', name: 'Trabajo 3' }
         ],
         'trabajoIframe', 'trabajoLink', 'trabajoCounter', 'trabajoPrev', 'trabajoNext',
         function(index) {
@@ -135,11 +136,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 excelDivider.style.display = 'block';
                 pbiLink.style.display = 'none';
                 pbiDivider.style.display = 'none';
-            } else {
+            } else if (index === 1) {
                 excelLink.style.display = 'none';
                 excelDivider.style.display = 'none';
                 pbiLink.style.display = 'inline-block';
                 pbiDivider.style.display = 'block';
+            } else {
+                excelLink.style.display = 'none';
+                excelDivider.style.display = 'none';
+                pbiLink.style.display = 'none';
+                pbiDivider.style.display = 'none';
             }
         }
     );
