@@ -676,6 +676,47 @@ footer {
     background: #732d91;
 }
 
+.certificado-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.certificado-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 2px solid #f1c40f;
+    background: linear-gradient(135deg, #fffef5, #ffffff);
+}
+
+.certificado-card h3 {
+    color: #d4a017;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.certificado-img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .certificado-card {
+        padding: 1.5rem;
+    }
+    
+    .certificado-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
 .eval-item {
     background: var(--light);
     padding:0.8rem;
