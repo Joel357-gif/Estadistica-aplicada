@@ -75,13 +75,26 @@ document.addEventListener('DOMContentLoaded', function() {
             { id: '16JcJUyWTFLAacRpvcWkioXTjiodcst9B', name: 'Conferencia Smart Learning' },
             { id: '18ABNDYcoEcr5FDTQRJXap_8wJbsfDkoi', name: 'Conferencia Transformación Digital' },
             { id: '1vv220YV0zNKL70Ovr8fuliAxKFngLihh', name: 'Conferencia Educación a Distancia' },
-            { id: '1MmCjmSqatj7NEbR3xr1901ibLBmgiwlj', name: 'Conferencia Metodología Activa' }
+            { id: '1MmCjmSqatj7NEbR3xr1901ibLBmgiwlj', name: 'Conferencia Metodología Activa' },
+            { id: '1_Br_Imd_ma40sLii7Jy_hIWK2yzSKskb', name: 'Ensayo Adicción' }
         ],
         'ensayoIframe', 'ensayoLink', 'ensayoCounter', 'ensayoPrev', 'ensayoNext',
         function(index) {
             const btn = document.getElementById('ensayoLink');
             const titleEl = document.getElementById('ensayoTitle');
-            if (index === 2) {
+            const normalStyle = function() {
+                btn.textContent = 'Ver PDF';
+                btn.className = 'btn-small';
+                titleEl.style.display = 'block';
+                titleEl.style.background = '#f0f4f8';
+                titleEl.style.color = '#2c3e50';
+                titleEl.style.borderLeftColor = '#3498db';
+            };
+            if (index === 0 || index === 1) {
+                btn.textContent = 'Ver PDF';
+                btn.className = 'btn-small';
+                titleEl.style.display = 'none';
+            } else if (index === 2) {
                 btn.textContent = 'Ver Ensayo de la Conferencia';
                 btn.className = 'btn-small highlight';
                 titleEl.textContent = 'IA Generativa en el ámbito profesional: Editorial Tekman / Directora Carolina Clemente';
@@ -101,10 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 btn.className = 'btn-small highlight';
                 titleEl.textContent = 'Metodolodia activa apoyadas por tecnología - MSc. Hamilton Cabrera y MSc. Jorge Muñoz';
                 titleEl.style.display = 'block';
-            } else {
+            } else if (index === 6) {
                 btn.textContent = 'Ver PDF';
                 btn.className = 'btn-small';
                 titleEl.style.display = 'none';
+            } else {
+                normalStyle();
+                titleEl.textContent = 'Ensayo ' + (index + 1);
             }
         }
     );
